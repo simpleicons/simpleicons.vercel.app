@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "now rm simpleicons --safe -y || true && now"
+  },
+  "dependencies": {
+    "micro": "^9.3.3",
+    "micro-fork": "^0.1.0",
+    "serve-marked": "^0.4.0",
+    "simple-icons": "^1.9.8"
+  }
+}

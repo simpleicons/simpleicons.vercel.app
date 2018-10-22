@@ -1,0 +1,8 @@
+{
+  "name": "simpleicons",
+  "alias": "simpleicons",
+  "public": true,
+  "engines": {
+    "node": "^10"
+  }
+}
