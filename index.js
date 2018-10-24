@@ -13,7 +13,7 @@ const serveReadme = serveMarked('./README.md', {
     body { margin: 0 }
     .markdown-body { max-width: 640px; margin: 0 auto; padding: 0 1em }
     .markdown-body h1 { text-align: center; font: 2.2em/5em Merriweather, serif }
-    .markdown-body h1 { margin: 0 -50%; background-color: #F9F9F9 }
+    .markdown-body h1 { width: 100vw; margin: 0 0 0 calc(50% - 50vw); background-color: #F9F9F9 }
     .markdown-body h1 + p { text-align: center; margin: -11px 0 4em 0; }
     h2, h3, h4, h5 { font-family: Merriweather, serif }
   `,
