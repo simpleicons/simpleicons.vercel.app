@@ -7,16 +7,7 @@ const simpleIcons = require('simple-icons')
 const notfound = (req, res) => send(res, 404, 'NOT FOUND')
 const serveReadme = serveMarked('./README.md', {
   title: 'Simple Icons',
-  inlineCSS: `
-    @import "https://fonts.googleapis.com/css?family=Merriweather";
-    @import "https://sindresorhus.com/github-markdown-css/github-markdown.css";
-    body { margin: 0 }
-    .markdown-body { max-width: 640px; margin: 0 auto; padding: 0 1em }
-    .markdown-body h1 { text-align: center; font: 2.2em/5em Merriweather, serif }
-    .markdown-body h1 { width: 100vw; margin: 0 0 0 calc(50% - 50vw); background-color: #F9F9F9 }
-    .markdown-body h1 + p { text-align: center; margin: -11px 0 4em 0; }
-    h2, h3, h4, h5 { font-family: Merriweather, serif }
-  `,
+  inlineCSS: `.markdown-body h1 + p { text-align: center; margin: -40px 0 4em 0; }`,
   beforeHeadEnd: '<meta name="viewport" content="width=device-width">'
 })
 
