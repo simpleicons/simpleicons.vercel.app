@@ -15,5 +15,5 @@ Serve [simpleicons](https://simpleicons.org/) with options.
 
 [license-src]: https://badgen.net/badge/license/MIT/blue
 [license-href]: https://github.com/simpleicons/simpleicons.now.sh/blob/master/LICENSE
-[github-src]: https://badgen.net/badge//simpleicons%2Fsimpleicons.now.sh/black?icon=github
+[github-src]: https://badgen.net/badge/github/simpleicons%2Fsimpleicons.now.sh/black?icon&label
 [github-href]: https://github.com/simpleicons/simpleicons.now.sh
