@@ -1,26 +1,8 @@
-const fs = require('fs')
-const path = require('path')
 const { send } = require('micro')
 const matchRoute = require('my-way')
-const serveMarked = require('serve-marked')
-const simpleIcons = require('simple-icons')
 
-const { titleToFilename } = require('./utils.js')
-
-// format title to filename
-const icons = Object.keys(simpleIcons).reduce((accu, curr) => {
-  accu[titleToFilename(curr)] = simpleIcons[curr]
-  return accu
-}, {})
-
-const serveReadme = serveMarked(
-  fs.readFileSync(path.join(__dirname, 'README.md'), 'utf8'),
-  {
-    title: 'Simple Icons',
-    inlineCSS: `.markdown-body h1 + p { text-align: center; margin: -40px 0 4em 0; }`,
-    beforeHeadEnd: '<meta name="viewport" content="width=device-width">'
-  }
-)
+const icons = require('./icons.js')
+const serveHomepage = require('./home.js')
 
 const serveIcon = (req, res, params) => {
   const { name, color } = params
@@ -59,7 +41,7 @@ module.exports = (req, res) => {
   }
 
   if (req.url === '/') {
-    return serveReadme(req, res)
+    return serveHomepage(req, res)
   }
 
   const redirectParams = matchRoute('/icons/:name', req.url)
