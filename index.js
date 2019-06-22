@@ -1,30 +1,49 @@
 const fs = require('fs')
+const path = require('path')
 const { send } = require('micro')
-const { router, get } = require('micro-fork')
+const matchRoute = require('my-way')
 const serveMarked = require('serve-marked')
 const simpleIcons = require('simple-icons')
 
-const notfound = (req, res) => send(res, 404, 'NOT FOUND')
-const serveReadme = serveMarked('./README.md', {
-  title: 'Simple Icons',
-  inlineCSS: `.markdown-body h1 + p { text-align: center; margin: -40px 0 4em 0; }`,
-  beforeHeadEnd: '<meta name="viewport" content="width=device-width">'
-})
+const { titleToFilename } = require('./utils.js')
 
-const serveIcons = (req, res) => {
-  const { color } = req.query
-  const expected = `node_modules/simple-icons/icons/${req.params.name}`
+// format title to filename
+const icons = Object.keys(simpleIcons).reduce((accu, curr) => {
+  accu[titleToFilename(curr)] = simpleIcons[curr]
+  return accu
+}, {})
 
-  fs.access(expected, fs.constants.R, function (err) {
-    if (err) {
-      notfound(req, res)
-    } else {
-      const iconSource = fs.readFileSync(expected, 'utf-8')
-      res.setHeader('Content-Type', 'image/svg+xml')
-      res.setHeader('Cache-Control', 'public, max-age=60, s-maxage=2419200')
-      send(res, 200, transformSVG(iconSource, { fill: color }))
-    }
-  })
+const serveReadme = serveMarked(
+  fs.readFileSync(path.join(__dirname, 'README.md'), 'utf8'),
+  {
+    title: 'Simple Icons',
+    inlineCSS: `.markdown-body h1 + p { text-align: center; margin: -40px 0 4em 0; }`,
+    beforeHeadEnd: '<meta name="viewport" content="width=device-width">'
+  }
+)
+
+const serveIcon = (req, res, params) => {
+  const { name, color } = params
+
+  if (icons[name]) {
+    res.setHeader('Content-Type', 'image/svg+xml')
+    res.setHeader('Cache-Control', 'public, max-age=60, s-maxage=2419200')
+    return send(res, 200, transformSVG(icons[name].svg, { fill: color }))
+  }
+
+  send(res, 404)
+}
+
+const serveRedirect = (req, res, params) => {
+  const name = params.name.split('.')[0]
+
+  if (icons[name]) {
+    const { color } = require('url').parse(req.url, true).query
+    res.setHeader('Location', `/${name}/${color}`)
+    return send(res, 301)
+  }
+
+  send(res, 404)
 }
 
 const transformSVG = (svgString, { fill }) => {
@@ -34,11 +53,28 @@ const transformSVG = (svgString, { fill }) => {
   return svgString
 }
 
-module.exports = router()(
-  get('/icons/:name', serveIcons),
-  get('/', serveReadme),
-  get('*', notfound)
-)
+module.exports = (req, res) => {
+  if (req.method !== 'GET') {
+    return send(res, 403)
+  }
+
+  if (req.url === '/') {
+    return serveReadme(req, res)
+  }
+
+  const redirectParams = matchRoute('/icons/:name', req.url)
+
+  if (redirectParams) {
+    return serveRedirect(req, res, redirectParams)
+  }
+
+  const iconParams = matchRoute('/:name/:color?', req.url)
+  if (iconParams) {
+    return serveIcon(req, res, iconParams)
+  }
+
+  send(res, 404)
+}
 
 if (require.main === module) {
   require('micro')(module.exports).listen(3000)

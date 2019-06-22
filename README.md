@@ -5,13 +5,15 @@
 
 Serve [simpleicons](https://simpleicons.org/) with options.
 
+## Scheme
+
+```
+https://simpleicons.now.sh/:name/:color
+```
+
 ## Example
 
-- https://simpleicons.now.sh/icons/github.svg?color=eeeeee
-
-## Options
-
-- `color` **[RGB Value]** Icon's main color.
+- [`https://simpleicons.now.sh/github/aaa`](/github/aaa)
 
 [license-src]: https://badgen.net/badge/license/MIT/blue
 [license-href]: https://github.com/simpleicons/simpleicons.now.sh/blob/master/LICENSE
