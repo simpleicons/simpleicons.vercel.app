@@ -5,10 +5,10 @@
     "deploy": "now rm simpleicons --safe -y || true && now"
   },
   "dependencies": {
-    "micro": "^9.3",
+    "micro": "^9.3.4",
     "micro-fork": "^2.0",
     "my-way": "^1.0.1",
-    "serve-marked": "^2.0",
-    "simple-icons": "^1.9"
+    "serve-marked": "^2.0.2",
+    "simple-icons": "^1.13.0"
   }
 }
