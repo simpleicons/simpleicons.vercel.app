@@ -3,7 +3,7 @@
 [![license-src]][license-href]
 [![github-src]][github-href]
 
-Serve [simpleicons](https://simpleicons.org/) with options.
+Serve [simpleicons](https://simpleicons.org/) with colors.
 
 ## Scheme
 
