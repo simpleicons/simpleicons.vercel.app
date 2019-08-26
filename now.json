@@ -1,8 +1,12 @@
 {
+  "version": 2,
   "name": "simpleicons",
   "alias": "simpleicons",
   "public": true,
-  "engines": {
-    "node": "^10"
-  }
+  "builds": [
+    { "src": "index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/.*", "dest": "index.js" }
+  ]
 }
