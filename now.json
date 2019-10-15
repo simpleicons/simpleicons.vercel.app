@@ -1,7 +1,10 @@
 {
   "version": 2,
   "name": "simpleicons",
-  "alias": "simpleicons",
+  "alias": [
+    "simpleicons",
+    "ico"
+  ],
   "public": true,
   "builds": [
     { "src": "index.js", "use": "@now/node" }
