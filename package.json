@@ -7,7 +7,7 @@
   "dependencies": {
     "micro": "^9.3.4",
     "micro-fork": "^2.0",
-    "my-way": "^1.0.1",
+    "my-way": "^1.0.2",
     "serve-marked": "^2.0.2",
     "simple-icons": "^1.17.1"
   }
