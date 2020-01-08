@@ -10,5 +10,6 @@
     "my-way": "^2.0.0",
     "serve-marked": "^2.0.2",
     "simple-icons": "^1.19.1"
-  }
+  },
+  "engines": { "node": "12.x" }
 }
