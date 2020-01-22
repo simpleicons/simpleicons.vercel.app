@@ -6,10 +6,12 @@
     "ico"
   ],
   "public": true,
-  "builds": [
-    { "src": "index.js", "use": "@now/node" }
-  ],
   "routes": [
-    { "src": "/.*", "dest": "index.js" }
-  ]
+    { "src": "/.*", "dest": "api/index.ts" }
+  ],
+  "functions": {
+    "api/*.ts": {
+      "memory": 512
+    }
+  }
 }
