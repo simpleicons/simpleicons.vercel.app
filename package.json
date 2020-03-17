@@ -9,7 +9,7 @@
     "micro-fork": "^3.0",
     "my-way": "^2.0.0",
     "serve-marked": "^2.0.2",
-    "simple-icons": "^2.6.0"
+    "simple-icons": "^2.7.0"
   },
   "engines": { "node": "12.x" }
 }
