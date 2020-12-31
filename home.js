@@ -1,10 +1,10 @@
 const fs = require('fs')
 const path = require('path')
-const serveMarked = require('serve-marked')
+const serveMarked = require('serve-marked').default
 
 const icons = require('./icons.js')
 
-module.exports = serveMarked(
+const serveHome = serveMarked(
   fs.readFileSync(path.join(__dirname, 'README.md'), 'utf8'),
   {
     title: 'Simple Icons',
@@ -24,6 +24,10 @@ module.exports = serveMarked(
     `
   }
 )
+
+module.exports = function (req, res) {
+  serveHome(req, res)
+}
 
 function genIconsHtml () {
   return Object.keys(icons).map(k => {
