@@ -3,26 +3,21 @@
 [![license-src]][license-href]
 [![github-src]][github-href]
 
-Serve colorful [simpleicons](https://simpleicons.org/) on CDN.
+Modified version of [simpleicons.vercel.app](https://simpleicons.vercel.app) (More prominently known as simpleicons.now.sh) that allows you to use coloured versions of GitHub's [Octicons](https://primer.style/octicons).
 
 ## Scheme
 
 ```
-https://simpleicons.now.sh/:name/:color
+https://octicons-andre601.vercel.app/:name/:color
+https://octi.vercel.app/:name/:color
 ```
 
-or even shorter
+## Examples
 
-```
-https://ico.now.sh/:name/:color
-```
+- [`https://octicons-col.vercel.app/`](https://octicons-col.vercel.app/mark-github/000)
+- [`https://octicons-col.vercel.app/check-circle-fill/00ff00`](https://octicons-col.vercel.app/check-circle-fill/00ff00)
 
-## Example
-
-- [`https://simpleicons.now.sh/github/aaa`](https://simpleicons.now.sh/github/aaa)
-- [`https://ico.now.sh/twitter/1da1f2`](https://ico.now.sh/twitter/1da1f2)
-
-[license-src]: https://badgen.net/badge/license/MIT/blue
+[license-src]: https://img.shields.io/badge/License-MIT-blue
 [license-href]: https://github.com/simpleicons/simpleicons.now.sh/blob/master/LICENSE
-[github-src]: https://badgen.net/badge/github/amio%2Fsimpleicons.now.sh?icon&label
-[github-href]: https://github.com/simpleicons/simpleicons.now.sh
+[github-src]: https://img.shields.io/badge/-Andre601%2Focticons.vercel.app-blue?logo=github&labelColor=777
+[github-href]: https://github.com/Andre601/octicons.vercel.app
