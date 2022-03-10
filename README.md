@@ -14,8 +14,8 @@ https://octi.vercel.app/:name/:color
 
 ## Examples
 
-- [`https://octicons-col.vercel.app/`](https://octicons-col.vercel.app/mark-github/000)
-- [`https://octicons-col.vercel.app/check-circle-fill/00ff00`](https://octicons-col.vercel.app/check-circle-fill/00ff00)
+- [`https://octicons-col.vercel.app/mark-github/000`](https://octicons-col.vercel.app/mark-github/000)
+- [`https://octi.vercel.app/check-circle-fill/238636`](https://octicons-col.vercel.app/check-circle-fill/238636)
 
 [license-src]: https://img.shields.io/badge/License-MIT-blue
 [license-href]: https://github.com/simpleicons/simpleicons.now.sh/blob/master/LICENSE
