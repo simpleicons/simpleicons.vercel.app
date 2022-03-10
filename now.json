@@ -2,8 +2,8 @@
   "version": 2,
   "name": "simpleicons",
   "alias": [
-    "simpleicons",
-    "ico"
+    "octicons",
+    "octi"
   ],
   "public": true,
   "routes": [
