@@ -23,5 +23,5 @@ Some examples:
 
 [license-src]: https://img.shields.io/badge/License-MIT-blue
 [license-href]: https://github.com/Andre601/octicons-col.vercel.app/blob/master/LICENSE
-[github-src]: https://img.shields.io/badge/-Andre601%2Focticons-col.vercel.app-blue?logo=github&labelColor=777
+[github-src]: https://img.shields.io/badge/-Andre601%2Focticons--col.vercel.app-blue?logo=github&labelColor=777
 [github-href]: https://github.com/Andre601/octicons-col.vercel.app
