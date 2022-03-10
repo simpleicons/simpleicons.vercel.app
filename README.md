@@ -17,9 +17,6 @@ https://octi.vercel.app/:name/:color
 - [`https://octicons-col.vercel.app/`](https://octicons-col.vercel.app/mark-github/000)
 - [`https://octicons-col.vercel.app/check-circle-fill/00ff00`](https://octicons-col.vercel.app/check-circle-fill/00ff00)
 
-- [`https://simpleicons.now.sh/github/aaa`](https://simpleicons.now.sh/github/aaa)
-- [`https://ico.now.sh/twitter/1da1f2`](https://ico.now.sh/twitter/1da1f2)
-
 [license-src]: https://img.shields.io/badge/License-MIT-blue
 [license-href]: https://github.com/simpleicons/simpleicons.now.sh/blob/master/LICENSE
 [github-src]: https://img.shields.io/badge/-Andre601%2Focticons.vercel.app-blue?logo=github&labelColor=777
