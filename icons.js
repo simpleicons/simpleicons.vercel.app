@@ -1,8 +1,8 @@
-const simpleIcons = require('simple-icons')
+const octicons = require('@primer/octicons')
 const { titleToFilename } = require('./utils.js')
 
 // format title to filename
-module.exports = Object.keys(simpleIcons).reduce((accu, curr) => {
-  accu[titleToFilename(curr)] = simpleIcons[curr]
+module.exports = Object.keys(octicons).reduce((accu, curr) => {
+  accu[titleToFilename(curr)] = octicons[curr]
   return accu
 }, {})
