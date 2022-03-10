@@ -1,4 +1,4 @@
-# simpleicons.now.sh
+# octicons-col.vercel.app
 
 [![license-src]][license-href]
 [![github-src]][github-href]
