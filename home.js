@@ -7,7 +7,7 @@ const icons = require('./icons.js')
 const serveHome = serveMarked(
   fs.readFileSync(path.join(__dirname, 'README.md'), 'utf8'),
   {
-    title: 'Simple Icons',
+    title: 'Colored Octicons',
     inlineCSS: `
       .markdown-body { max-width: 960px }
       .markdown-body h1 + p { text-align: center; margin: -40px 0 4em 0; }
