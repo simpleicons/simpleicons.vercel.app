@@ -6,12 +6,13 @@ const icons = require('./icons.js')
 const serveHomepage = require('./home.js')
 
 const serveIcon = (req, res, params) => {
-  const { name, color } = params
+  const { name, color, size } = params
 
   if (icons[name]) {
     res.setHeader('Content-Type', 'image/svg+xml')
     res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate=604800')
-    return send(res, 200, icons[name].toSVG({ fill: `#${color}`, width: '', height: '', xmlns: 'http://www.w3.org/2000/svg'}))
+    
+    return send(res, 200, icons[name].toSVG({ fill: `#${color}`, width: `${size}`, height: `${size}`, xmlns: 'http://www.w3.org/2000/svg'}))
   }
 
   send(res, 404)
@@ -54,8 +55,8 @@ module.exports = (req, res) => {
   if (redirectParams) {
     return serveRedirect(req, res, redirectParams)
   }
-
-  const iconParams = matchRoute('/:name/:color?', req.url)
+  
+  const iconParams = matchRoute('/:name/:color?/:size?', req.url)
   if (iconParams) {
     return serveIcon(req, res, iconParams)
   }
