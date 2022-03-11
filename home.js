@@ -44,7 +44,6 @@ module.exports = function (req, res) {
 
 function genIconsHtml () {
   return Object.keys(icons).map(k => {
-    const url = `/${k}/000`
-    return `<a href="${url}"><img src="${url}" alt="${k}" />${k}</a>`
+    return `<a href="/${k}/c9d1d9"><img src="/${k}/000" alt="${k}" />${k}</a>`
   }).join('')
 }
