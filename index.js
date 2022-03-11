@@ -20,7 +20,7 @@ const serveIcon = (req, res, params) => {
 const serveCSS = (req, res) => {
   res.setHeader('Content-Type', 'text/css')
   res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate=604800')
-  return send(res, 200, fs.readFileSync('assets/stylesheets/style.css', 'utf-8'))
+  return send(res, 200, fs.readFileSync('/assets/stylesheets/style.css', 'utf-8'))
 }
 
 const serveRedirect = (req, res, params) => {
