@@ -12,8 +12,12 @@ const serveIcon = (req, res, params) => {
     res.setHeader('Content-Type', 'image/svg+xml')
     res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate=604800')
     
-    if (color === '') {
+    if (!color) {
       color = '000'
+    }
+    
+    if (!size) {
+      size = ''
     }
     
     return send(res, 200, icons[name].toSVG({ fill: `#${color}`, width: `${size}`, height: `${size}`, xmlns: 'http://www.w3.org/2000/svg'}))
@@ -59,8 +63,8 @@ module.exports = (req, res) => {
   if (redirectParams) {
     return serveRedirect(req, res, redirectParams)
   }
-
-  const iconParams = matchRoute('/:name/:color?', req.url)
+  
+  const iconParams = matchRoute('/:name/:color?/:size?', req.url)
   if (iconParams) {
     return serveIcon(req, res, iconParams)
   }
