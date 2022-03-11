@@ -22,6 +22,12 @@ const serveHome = serveMarked(
       <meta name="og:description" content="Simple website for getting colored Octicons SVGs from GitHub.">
       <meta name="og:url" content="https://octicons-col.vercel.app/">
       
+      <link href="https://www.andre601.ch/assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://www.andre601.ch/assets/img/favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://www.andre601.ch/assets/img/favicons/favicon-16x16.png">
+      
+      <link rel="manifest" href="https://www.andre601.ch/assets/site.webmanifest">
+      
       <link href="./stylesheets/style.css" rel="stylesheet">
     `,
     beforeBodyEnd: `
