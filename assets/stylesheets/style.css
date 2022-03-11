@@ -15,6 +15,10 @@ li {
   color: var(--color-fg);
 }
 
+.markdown-body {
+  max-width: 960px;
+}
+
 .markdown-body h1 {
   background-color: var(--color-bg);
   color: var(--color-fg);
@@ -24,12 +28,20 @@ li {
   color: var(--color-fg);
 }
 
+.markdown-body p {
+  color: var(--color-fg);
+}
+
 .markdown-body a {
   color: var(--color-fg__link);
 }
 
-.markdown-body {
-  max-width: 960px;
+.markdown-body code {
+  background-color: var(--color-bg__code);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
 }
 
 .markdown-body h1 + p {
