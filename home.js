@@ -8,6 +8,7 @@ const serveHome = serveMarked(
   fs.readFileSync(path.join(__dirname, 'README.md'), 'utf8'),
   {
     title: 'Colored Octicon SVGs',
+    inlineCSS, '@import url("https://octi.vercel.app/assets/stylesheets/style.css")',
     beforeHeadEnd: `
       <meta name="viewport" content="width=device-width">
       
@@ -27,8 +28,6 @@ const serveHome = serveMarked(
       <link rel="icon" type="image/png" sizes="16x16" href="https://www.andre601.ch/assets/img/favicons/favicon-16x16.png">
       
       <link rel="manifest" href="https://www.andre601.ch/assets/site.webmanifest">
-      
-      <link href="https://raw.githubusercontent.com/Andre601/octicons-col.vercel.app/feature/custom-css/assets/stylesheets/style.css" rel="stylesheet">
     `,
     beforeBodyEnd: `
       <div id="icons" class="markdown-body">
