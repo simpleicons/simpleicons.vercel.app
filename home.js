@@ -28,7 +28,7 @@ const serveHome = serveMarked(
       
       <link href="https://www.andre601.ch/assets/site.webmanifest" rel="manifest">
       
-      <link href="/assets/stylesheets/style.css" rel="stylesheet">
+      <link href="/styles" rel="stylesheet">
     `,
     beforeBodyEnd: `
       <div id="icons" class="markdown-body">
