@@ -1,4 +1,4 @@
-# octicons-col.vercel.app
+# Colored Octicon SVGs
 
 [![license-src]][license-href]
 [![github-src]][github-href]

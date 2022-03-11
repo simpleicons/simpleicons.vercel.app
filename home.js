@@ -7,16 +7,29 @@ const icons = require('./icons.js')
 const serveHome = serveMarked(
   fs.readFileSync(path.join(__dirname, 'README.md'), 'utf8'),
   {
-    title: 'Colored Octicons',
-    inlineCSS: `
-      .markdown-body { max-width: 960px }
-      .markdown-body h1 + p { text-align: center; margin: -40px 0 4em 0; }
-      #icons a { display: inline-block; text-align: center; margin-right: 7px }
-      #icons a { width: 80px; height: 120px; font-size: 12px; vertical-align: top }
-      #icons a { color: #777; font-family: consolas, monospace }
-      #icons img { width: 32px; display: block; margin: 1em auto }
+    title: 'Colored Octicon SVGs',
+    beforeHeadEnd: `
+      <meta name="viewport" content="width=device-width">
+      
+      <meta name="description" content="Simple website for getting colored Octicons SVGs from GitHub.">
+      
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Colored Octicon SVGs">
+      <meta name="twitter:description" content="Simple website for getting colored Octicons SVGs from GitHub.">
+      
+      <meta name="og:site_name" content="Colored Octicon SVGs">
+      <meta name="og:title" content="Colored Octicon SVGs">
+      <meta name="og:description" content="Simple website for getting colored Octicons SVGs from GitHub.">
+      <meta name="og:url" content="https://octicons-col.vercel.app/">
+      
+      <link href="https://www.andre601.ch/assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+      <link href="https://www.andre601.ch/assets/img/favicons/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+      <link href="https://www.andre601.ch/assets/img/favicons/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+      
+      <link href="https://www.andre601.ch/assets/site.webmanifest" rel="manifest">
+      
+      <link href="/styles" rel="stylesheet">
     `,
-    beforeHeadEnd: '<meta name="viewport" content="width=device-width">',
     beforeBodyEnd: `
       <div id="icons" class="markdown-body">
         <h2>Icons</h2><div>${genIconsHtml()}</div>
@@ -31,7 +44,6 @@ module.exports = function (req, res) {
 
 function genIconsHtml () {
   return Object.keys(icons).map(k => {
-    const url = `/${k}/000`
-    return `<a href="${url}"><img src="${url}" alt="${k}" />${k}</a>`
+    return `<a href="/${k}/000"><img src="/${k}/c9d1d9" alt="${k}" />${k}</a>`
   }).join('')
 }

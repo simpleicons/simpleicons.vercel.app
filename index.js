@@ -1,3 +1,4 @@
+const fs = require('fs')
 const { send } = require('micro')
 const matchRoute = require('my-way')
 
@@ -14,6 +15,12 @@ const serveIcon = (req, res, params) => {
   }
 
   send(res, 404)
+}
+
+const serveCSS = (req, res) => {
+  res.setHeader('Content-Type', 'text/css')
+  res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate=604800')
+  return send(res, 200, fs.readFileSync('assets/stylesheets/style.css', 'utf-8'))
 }
 
 const serveRedirect = (req, res, params) => {
@@ -36,6 +43,10 @@ module.exports = (req, res) => {
   if (req.url === '/') {
     // res.setHeader('Cache-Control', 'public, max-age=3600, s-maxage=2592000')
     return serveHomepage(req, res)
+  }
+  
+  if (req.url === '/styles') {
+    return serveCSS(req, res)
   }
 
   const redirectParams = matchRoute('/icons/:name', req.url)
