@@ -1,0 +1,63 @@
+:root {
+  --color-bg: #0d1117;
+  --color-bg__code: rgba(110, 118, 129, 0.4);
+  
+  --color-fg: #c9d1d9;
+  --color-fg__link: #58a6ff;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+li {
+  color: var(--color-fg);
+}
+
+.markdown-body h1 {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+.markdown-body h2 {
+  color: var(--color-fg);
+}
+
+.markdown-body a {
+  color: var(--color-fg__link);
+}
+
+.markdown-body {
+  max-width: 960px;
+}
+
+.markdown-body h1 + p {
+  text-align: center;
+  margin: -40px 0 4em 0;
+}
+
+#icons a {
+  display: inline-block;
+  text-align: center;
+  margin-right: 7px;
+}
+
+#icons a {
+  width: 80px;
+  height: 120px;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+#icons a {
+  color: var(--color-fg);
+  font-family: consolas, monospace;
+}
+
+#icons img {
+  width: 32px;
+  display: block;
+  margin: 1em auto;
+  background-color: transparent;
+}
