@@ -11,7 +11,8 @@
   ],
   "functions": {
     "api/*.ts": {
-      "memory": 512
+      "memory": 512,
+      "includeFiles": "assets/**"
     }
   }
 }
