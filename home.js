@@ -28,7 +28,7 @@ const serveHome = serveMarked(
       
       <link rel="manifest" href="https://www.andre601.ch/assets/site.webmanifest">
       
-      <link href="https://octicons-git-feature-custom-css-andre601.vercel.app//assets/stylesheets/style.css" rel="stylesheet">
+      <link href="https://raw.githubusercontent.com/Andre601/octicons-col.vercel.app/feature/custom-css/assets/stylesheets/style.css" rel="stylesheet">
     `,
     beforeBodyEnd: `
       <div id="icons" class="markdown-body">
