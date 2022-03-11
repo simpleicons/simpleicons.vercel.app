@@ -10,6 +10,9 @@
     { "src": "/.*", "dest": "api/index.ts" }
   ],
   "functions": {
+    "home.js": {
+      "includeFiles": "assets/stylesheets/style.css"
+    },
     "api/*.ts": {
       "memory": 512
     }
