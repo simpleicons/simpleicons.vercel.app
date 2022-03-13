@@ -19,13 +19,13 @@ The below URL patterns are available to use. You may also use https://octicons-c
   **Required**  
   Name of the Octicon to use. See [Icons section](#icons) below for details.
 - `:color`  
-  **Optional**
+  **Optional**  
   Sets the fill color of the Octicon. Currently supported are only HEX color values (without the `#`).  
   If not set will `undefined` be used.
-- `:size`
-  **Optional**
+- `:size`  
+  **Optional**  
   Sets the size (in pixels) of the Octicon. This option requires the `:color` parameter to be set!  
-  If not set will `undefined` be used.
+  If not set will `undefined` be used.  
   Due to limitations (And me sucking at JS) may lines of SVGs look different (Smaller) depending on the size.
 
 ## Examples
