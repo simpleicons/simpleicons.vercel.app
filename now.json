@@ -2,8 +2,7 @@
   "version": 2,
   "name": "simpleicons",
   "alias": [
-    "octicons-col",
-    "octi"
+    "octicons-col"
   ],
   "public": true,
   "routes": [
