@@ -3,7 +3,7 @@
 [![license-src]][license-href]
 [![github-src]][github-href]
 
-Serve colorful [simpleicons](https://simpleicons.org/) on CDN.
+Serve colorful [simpleicons](https://simpleicons.org/) on Vercel CDN.
 
 ## Scheme
 
