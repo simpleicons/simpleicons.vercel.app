@@ -5,7 +5,7 @@
     "deploy": "now rm simpleicons --safe -y || true && now"
   },
   "dependencies": {
-    "@primer/octicons": "^17.11.0",
+    "@primer/octicons": "^17.11.1",
     "micro": "^10.0.1",
     "micro-fork": "^3.0",
     "my-way": "^2.0.0",
