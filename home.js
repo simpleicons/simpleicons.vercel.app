@@ -1,11 +1,12 @@
 const fs = require('fs')
 const path = require('path')
-const serveMarked = require('serve-marked').default
+const { serveMarked } = require('serve-marked')
 
 const icons = require('./icons.js')
+const readmeMarkdown = fs.readFileSync(path.join(__dirname, 'README.md'), 'utf8')
 
 const serveHome = serveMarked(
-  fs.readFileSync(path.join(__dirname, 'README.md'), 'utf8'),
+  readmeMarkdown,
   {
     title: 'Simple Icons',
     inlineCSS: `
@@ -14,7 +15,7 @@ const serveHome = serveMarked(
       #icons a { display: inline-block; text-align: center; margin-right: 7px }
       #icons a { width: 80px; height: 120px; font-size: 12px; vertical-align: top }
       #icons a { color: #777; font-family: consolas, monospace }
-      #icons img { width: 32px; display: block; margin: 1em auto }
+      #icons img { width: 32px; height: 32px; display: block; margin: 1em auto }
     `,
     beforeHeadEnd: '<meta name="viewport" content="width=device-width">',
     beforeBodyEnd: `
@@ -32,6 +33,6 @@ module.exports = function (req, res) {
 function genIconsHtml () {
   return Object.keys(icons).map(k => {
     const url = `/${k}/000`
-    return `<a href="${url}"><img src="${url}" alt="${k}" />${k}</a>`
+    return `<a href="${url}"><img src="${url}" alt="${k}" loading="lazy" />${k}</a>`
   }).join('')
 }

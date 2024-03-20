@@ -41,7 +41,7 @@ module.exports = (req, res) => {
   }
 
   if (req.url === '/') {
-    // res.setHeader('Cache-Control', 'public, max-age=3600, s-maxage=2592000')
+    res.setHeader('Cache-Control', 'public, max-age=3600, s-maxage=2592000')
     return serveHomepage(req, res)
   }
 
@@ -57,8 +57,4 @@ module.exports = (req, res) => {
   }
 
   send(res, 404)
-}
-
-if (require.main === module) {
-  require('micro')(module.exports).listen(3000)
 }
