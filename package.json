@@ -8,7 +8,7 @@
     "micro": "^10.0.1",
     "micro-fork": "^3.0",
     "my-way": "^2.0.0",
-    "serve-marked": "^4.0.0",
+    "serve-marked": "^5.0.0",
     "simple-icons": "^11.9.0"
   },
   "engines": {
