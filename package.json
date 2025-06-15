@@ -1,8 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "micro index.js",
-    "deploy": "now rm simpleicons --safe -y || true && now"
+    "start": "micro main.js"
   },
   "dependencies": {
     "micro": "^10.0.1",
