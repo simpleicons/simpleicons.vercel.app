@@ -9,7 +9,7 @@ const serveIcon = (req, res, params) => {
 
   if (icons[name]) {
     res.setHeader('Content-Type', 'image/svg+xml')
-    res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate=604800')
+    res.setHeader('Cache-Control', 'public, max-age=3600, s-maxage=2592000')
     return send(res, 200, transformSVG(icons[name].svg, { fill: color }))
   }
 

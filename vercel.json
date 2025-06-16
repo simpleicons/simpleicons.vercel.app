@@ -8,5 +8,16 @@
     "api/*.ts": {
       "memory": 128
     }
-  }
+  },
+  "headers": [
+    {
+      "source": "/:path*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=2592000" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" }
+      ]
+    }
+  ]
 }
