@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "build": "node build.mjs",
     "start": "micro main.js"
   },
   "dependencies": {
@@ -12,5 +13,9 @@
   },
   "engines": {
     "node": "22.x"
+  },
+  "devDependencies": {
+    "@vercel/node": "^5.2.2",
+    "hyper-marked": "^1.1.0"
   }
 }

@@ -1,0 +1,16 @@
+body {
+    max-width: 960px;
+}
+
+.markdown-content h1 + p {
+    text-align: center;
+    margin: -43px 0 4rem 0;
+    line-height: 20px;
+    height: 20px;
+    z-index: 1;
+}
+
+#icons { margin: -4rem 2rem 2rem 2rem }
+#icons a { width: 80px; height: 120px; margin-right: 1rem; vertical-align: top; display: inline-block; word-wrap: break-word }
+#icons a { text-align: center; color: #777; font-size: 12px; font-family: consolas, monospace }
+#icons img { width: 32px; height: 32px; display: block; margin: 1em auto }
