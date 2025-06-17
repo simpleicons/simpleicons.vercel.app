@@ -4,6 +4,12 @@
 
 Serve colorful [simpleicons](https://simpleicons.org/) on Vercel CDN.
 
+
+> NOTE:
+> simple-icons have an official [CDN service](https://github.com/simple-icons/simple-icons?tab=readme-ov-file#cdn-with-colors) now.
+> this (simpleicons.vercel.app) is no longer needed, cheers!
+
+
 ## Scheme
 
 ```
